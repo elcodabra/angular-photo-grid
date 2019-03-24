@@ -7,7 +7,6 @@
 
 <div class="example-container" [sortablejs]="items">
   <div *ngFor="let item of items; let i = index" class="box">
-    <!--<div class="remove-box" (click)="remove(i)">❌<mat-icon>home</mat-icon></div>-->
     <button class="remove-box" mat-mini-fab color="primary" (click)="remove(i)">
       <mat-icon>clear</mat-icon>
     </button>
