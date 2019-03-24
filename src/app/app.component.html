@@ -1,13 +1,16 @@
 <h1>Camera Grid</h1>
 
-<div>
-  <button (click)="add()">Add</button>
-  <button (click)="shuffle()">Shuffle</button>
+<div style="margin:20px">
+  <!--<button (click)="add()" mat-flat-button color="primary">Add</button>-->
+  <button (click)="shuffle()" mat-flat-button>Shuffle</button>
 </div>
 
 <div class="example-container" [sortablejs]="items">
   <div *ngFor="let item of items; let i = index" class="box">
-    <div class="remove-box" (click)="remove(i)">❌</div>
+    <!--<div class="remove-box" (click)="remove(i)">❌<mat-icon>home</mat-icon></div>-->
+    <button class="remove-box" mat-mini-fab color="primary" (click)="remove(i)">
+      <mat-icon>clear</mat-icon>
+    </button>
     <app-item [item]="item"></app-item>
   </div>
   <div class="add-box" (click)="add()">+</div>
