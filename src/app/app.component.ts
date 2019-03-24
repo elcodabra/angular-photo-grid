@@ -82,7 +82,7 @@ export class AppComponent {
       let sourceElement = this.source.element.nativeElement;
       phElement.style.width = sourceElement.clientWidth + 'px';
       phElement.style.height = sourceElement.clientHeight + 'px';
-      
+
       sourceElement.parentNode.removeChild(sourceElement);
     }
 

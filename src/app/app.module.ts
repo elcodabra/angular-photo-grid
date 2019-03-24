@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { ResizableModule } from 'angular-resizable-element';
 
 import { AppComponent } from './app.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
-  imports:      [ 
+  imports:      [
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
-    DragDropModule
+    DragDropModule,
+    ResizableModule,
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, ItemComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

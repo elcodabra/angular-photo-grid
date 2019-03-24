@@ -7,6 +7,9 @@
   <div cdkDropList [cdkDropListEnterPredicate]="enter" (cdkDropListDropped)="drop()" #placeholder></div>
   <div cdkDropList *ngFor="let item of items"
        [cdkDropListEnterPredicate]="enter" (cdkDropListDropped)="drop()">
-    <div cdkDrag class="example-box">{{item}}</div>
+    <div cdkDrag>
+      <div class="drag-button" cdkDragHandle></div>
+      <app-item [item]="item"></app-item>
+    </div>
   </div>
-</div> 
+</div>
