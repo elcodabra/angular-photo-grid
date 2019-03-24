@@ -1,10 +1,9 @@
-<div class="example-box"
+<div class="example-box" *ngIf="item"
      mwlResizable
      [ngStyle]="style"
      [enableGhostResize]="true"
+     [resizeCursorPrecision]="25"
      [resizeEdges]="{bottom: true, right: true, bottomRight: true}"
      (resizing)="onResize($event)">
-  {{item}}
-  <!--<div cdkDragHandle>AAA</div>-->
-  <!--<div class="resize-box" #ref (resize)="resize(ref)"></div>-->
+  <img class="image-box" src="{{item.url}}" alt="{{item.name}}" />
 </div>

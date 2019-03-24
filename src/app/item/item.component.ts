@@ -7,27 +7,23 @@ import { ResizeEvent } from "angular-resizable-element";
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  @Input() item: string;
+  @Input() item: any;
 
   public style: object = {};
 
   constructor() { }
 
   ngOnInit() {
+    this.style = {
+      backgroundColor: '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6),
+    }
   }
 
   onResize(event: ResizeEvent): void {
     this.style = {
-      // position: 'fixed',
-      // left: `${event.rectangle.left}px`,
-      // top: `${event.rectangle.top}px`,
       width: `${event.rectangle.width}px`,
       height: `${event.rectangle.height}px`
     };
-  }
-
-  resize() {
-    console.log('resized')
   }
 
 }

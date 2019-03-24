@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DragDropModule } from "@angular/cdk/drag-drop";
 import { ResizableModule } from 'angular-resizable-element';
+import { SortablejsModule } from "angular-sortablejs";
 
 import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
@@ -13,8 +13,8 @@ import { ItemComponent } from './item/item.component';
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
-    DragDropModule,
     ResizableModule,
+    SortablejsModule.forRoot({ animation: 500 }),
   ],
   declarations: [ AppComponent, ItemComponent ],
   bootstrap:    [ AppComponent ]

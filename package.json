@@ -11,8 +11,10 @@
     "@angular/platform-browser": "^7.0.1",
     "@angular/platform-browser-dynamic": "^7.0.1",
     "angular-resizable-element": "^3.2.4",
+    "angular-sortablejs": "^2.7.0",
     "core-js": "^2.5.7",
     "rxjs": "^6.3.3",
+    "sortablejs": "^1.8.4",
     "zone.js": "^0.8.26"
   },
   "scripts": {
